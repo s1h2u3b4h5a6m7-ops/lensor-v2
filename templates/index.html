@@ -1,35 +1,113 @@
-<!-- templates/index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lensor v2</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-  <div class="container">
-    <h1>Lensor v2</h1>
-    <p class="subtitle">Minimal Python robot UI</p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Status</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for row in rows %}
-        <tr>
-          <td>{{ row.name }}</td>
-          <td>{{ row.status }}</td>
-          <td>{{ row.value }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Lensor V2</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Lensor V2</h1>
+
+<p class="subtitle">
+Official NSE NIFTY 50 Dashboard
+</p>
+
+<div class="stats">
+
+<div class="card">
+
+<h3>Companies</h3>
+
+<p>{{ count }}</p>
+
+</div>
+
+<div class="card">
+
+<h3>Last Updated</h3>
+
+<p>{{ updated }}</p>
+
+</div>
+
+</div>
+
+
+<input
+type="text"
+id="search"
+placeholder="Search company..."
+>
+
+
+<table id="niftyTable">
+
+<thead>
+
+<tr>
+
+{% for key in rows[0].keys() %}
+<th>{{ key }}</th>
+{% endfor %}
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+{% for row in rows %}
+
+<tr>
+
+{% for value in row.values() %}
+
+<td>{{ value }}</td>
+
+{% endfor %}
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+const rows=document.querySelectorAll("#niftyTable tbody tr");
+
+rows.forEach(function(row){
+
+const text=row.innerText.toLowerCase();
+
+row.style.display=text.includes(value)?"":"none";
+
+});
+
+});
+
+</script>
+
 </body>
+
 </html>

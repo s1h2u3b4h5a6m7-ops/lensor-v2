@@ -1,1 +1,10 @@
-
+{
+  "dataset": "NSE Nifty 50",
+  "source_page": "https://www.nseindia.com/static/products-services/indices-nifty50-index",
+  "source_csv_url": "",
+  "updated_ist": "Not yet synced",
+  "generated_at_utc": "",
+  "count": 0,
+  "columns": [],
+  "rows": []
+}

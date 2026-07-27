@@ -1,17 +1,22 @@
-# app.py
 from flask import Flask, render_template
+import json
 
 app = Flask(__name__)
 
-DATA = [
-    {"name": "Alpha", "status": "Ready", "value": 10},
-    {"name": "Beta", "status": "Pending", "value": 20},
-    {"name": "Gamma", "status": "Done", "value": 30},
-]
 
 @app.route("/")
 def home():
-    return render_template("index.html", rows=DATA)
+
+    with open("data/nifty50.json", encoding="utf-8") as f:
+        data = json.load(f)
+
+    return render_template(
+        "index.html",
+        rows=data["companies"],
+        updated=data["updated"],
+        count=data["count"],
+    )
+
 
 if __name__ == "__main__":
     app.run(debug=True)

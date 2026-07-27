@@ -1,1 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lensor V2 — NSE Nifty 50</title>
+  <meta name="description" content="Static GitHub Pages dashboard for official NSE Nifty 50 CSV data." />
+  <meta name="theme-color" content="#07111f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Lensor V2</p>
+        <h1>Official NSE Nifty 50 dashboard</h1>
+        <p class="lede">
+          Static GitHub Pages site powered by a scheduled Python robot that refreshes the official NSE CSV and renders it in the browser.
+        </p>
+      </div>
 
+      <div class="hero-cards">
+        <article class="stat-card">
+          <span class="stat-label">Companies</span>
+          <strong id="companyCount">—</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Last Updated</span>
+          <strong id="updatedAt">—</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Source</span>
+          <strong id="sourceLabel">—</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <label class="search-wrap" aria-label="Search table">
+        <span>Search</span>
+        <input id="searchBox" type="search" placeholder="Search symbol, company, sector..." />
+      </label>
+
+      <div class="mini-meta">
+        <span id="visibleRows">0 rows</span>
+        <span id="statusPill">Loading…</span>
+      </div>
+    </section>
+
+    <section class="table-card">
+      <div class="table-wrap" role="region" aria-label="Nifty 50 data table" tabindex="0">
+        <table id="niftyTable">
+          <thead>
+            <tr id="tableHeadRow"></tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="footnote">
+      Data comes from the official NSE Nifty 50 CSV. Configure GitHub Pages to deploy from the <code>main</code> branch root, or use a GitHub Actions publishing workflow.
+    </p>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

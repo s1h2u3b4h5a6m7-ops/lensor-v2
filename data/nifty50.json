@@ -2,8 +2,8 @@
   "dataset": "NSE Nifty 50",
   "source_page": "https://www.nseindia.com/static/products-services/indices-nifty50-index",
   "source_csv_url": "https://nsearchives.nseindia.com/content/indices/ind_nifty50list.csv",
-  "updated_ist": "29 Sep 2026, 11:52 PM IST",
-  "generated_at_utc": "2026-09-29T18:22:39Z",
+  "updated_ist": "30 Sep 2026, 11:41 PM IST",
+  "generated_at_utc": "2026-09-30T18:11:58Z",
   "count": 50,
   "columns": [
     "Company Name",
@@ -47,6 +47,13 @@
       "Symbol": "AXISBANK",
       "Series": "EQ",
       "ISIN Code": "INE238A01034"
+    },
+    {
+      "Company Name": "BSE Ltd.",
+      "Industry": "Financial Services",
+      "Symbol": "BSE",
+      "Series": "EQ",
+      "ISIN Code": "INE118H01025"
     },
     {
       "Company Name": "Bajaj Auto Ltd.",
@@ -355,13 +362,6 @@
       "Symbol": "ULTRACEMCO",
       "Series": "EQ",
       "ISIN Code": "INE481G01011"
-    },
-    {
-      "Company Name": "Wipro Ltd.",
-      "Industry": "Information Technology",
-      "Symbol": "WIPRO",
-      "Series": "EQ",
-      "ISIN Code": "INE075A01022"
     }
   ]
 }

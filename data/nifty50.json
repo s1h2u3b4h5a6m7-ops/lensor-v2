@@ -2,8 +2,8 @@
   "dataset": "NSE Nifty 50",
   "source_page": "https://www.nseindia.com/static/products-services/indices-nifty50-index",
   "source_csv_url": "https://nsearchives.nseindia.com/content/indices/ind_nifty50list.csv",
-  "updated_ist": "21 Nov 2026, 02:20 AM IST",
-  "generated_at_utc": "2026-11-20T20:50:45Z",
+  "updated_ist": "22 Nov 2026, 01:22 AM IST",
+  "generated_at_utc": "2026-11-21T19:52:20Z",
   "count": 50,
   "columns": [
     "Company Name",
